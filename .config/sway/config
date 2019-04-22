@@ -4,10 +4,10 @@ set $mod Mod4
 set $modB Mod1
 
 # Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
+set $left a
+set $down s
+set $up w
+set $right d
 
 # Your preferred terminal emulator
 set $term terminator
@@ -84,17 +84,13 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 # Moving around:
 #
     # Move your focus around
-    bindsym $modB+Shift+a focus left
-    bindsym $modB+Shift+d focus right
-    bindsym $modB+Shift+s focus down
-    bindsym $modB+Shift+w focus up
+    bindsym $modB+Shift+$left focus left
+    bindsym $modB+Shift+$right focus right
+    bindsym $modB+Shift+$down focus down
+    bindsym $modB+Shift+$up focus up
 
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
 
-    # _move_ the focused window with the same, but add Shift
+    # _move_ the focused window 
     bindsym $mod+Shift+$left move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
@@ -103,7 +99,6 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 #
 # Workspaces:
 #
-
     bindsym $mod+right workspace next
     bindsym $mod+left workspace prev
     # switch to workspace
@@ -136,8 +131,8 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $modB+Shift+b splith
+    bindsym $modB+Shift+v splitv
 
     # Switch the current container between different layout styles
    # bindsym $mod+s layout stacking
@@ -145,16 +140,10 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+Shift+f fullscreen
-
-    # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
-
-    # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $modB+Shift+f fullscreen
 
     # move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym $modB+Shift+p focus parent
 #
 # Scratchpad:
 #
@@ -177,15 +166,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym d resize shrink width 10px
+    bindsym e resize grow width 10px
+    bindsym $up resize grow height 10px
+    bindsym $down resize shrink height 10px
+
 
     # ditto, with arrow keys
     bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
+    bindsym Up resize grow height 10px
+    bindsym Down shrink height 10px
     bindsym Right resize grow width 10px
 
     # return to default mode
