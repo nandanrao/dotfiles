@@ -193,6 +193,8 @@ mode "resize" {
 
     bindsym XF86MonBrightnessUp exec light -A 5
     bindsym XF86MonBrightnessDown exec light -U 5
+    bindsym XF86LaunchA exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $(xdg-user-dir PICTURES)/screenshots/$(date +'%Y-%m-%d-%H%M%S_grim.png')
+    bindsym XF86Explorer exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/screenshots/$(date +'%Y-%m-%d-%H%M%S_grim.png')
 
 
 #

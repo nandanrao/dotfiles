@@ -15,7 +15,16 @@ sudo apt install --yes \
         extra-cmake-modules \
         google-cloud-sdk \
         kubectl \ 
-	htop
+	htop \
+        sway \ 
+        grim \
+        slurp \
+        jq \ 
+        openvpn \
+        unrar \ 
+        suckless-tools
+
+        
 
 sudo snap install slack --classic
 sudo snap install helm --classic
