@@ -91,7 +91,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     bindsym $modB+Shift+$up focus up
 
 
-    # _move_ the focused window 
+    # _move_ the focused window
     bindsym $mod+Shift+$left move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
@@ -142,6 +142,8 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # Make the current focus fullscreen
     bindsym $modB+Shift+f fullscreen
+
+    bindsym $mod+Shift+space floating toggle
 
     # move focus to the parent container
     bindsym $modB+Shift+p focus parent
