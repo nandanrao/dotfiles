@@ -66,7 +66,6 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     bindsym $mod+Shift+q kill
 
     # start your launcher
-    bindsym $mod+d exec $menu
     bindsym $mod+r exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -163,23 +162,23 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 # Resizing containers:
 #
     bindsym $modB+Shift+r mode "resize"
+    # bindsym $mod+d mode "resize"
+    # bindsym $mod+e mode "resize"
 
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym d resize shrink width 10px
-    bindsym e resize grow width 10px
-    bindsym $up resize grow height 10px
-    bindsym $down resize shrink height 10px
+    bindsym d resize shrink width 15px
+    bindsym e resize grow width 15px
+    bindsym $up resize grow height 15px
+    bindsym $down resize shrink height 15px
+
+    # bindsym $mod+d resize shrink width 15px
+    # bindsym $mod+e resize grow width 15px
 
 
-    # ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Up resize grow height 10px
-    bindsym Down shrink height 10px
-    bindsym Right resize grow width 10px
 
     # return to default mode
     bindsym Return mode "default"

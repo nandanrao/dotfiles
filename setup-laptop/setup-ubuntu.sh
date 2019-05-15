@@ -14,17 +14,17 @@ sudo apt install --yes \
         cmake \
         extra-cmake-modules \
         google-cloud-sdk \
-        kubectl \ 
+        kubectl \
 	htop \
-        sway \ 
+        sway \
         grim \
         slurp \
-        jq \ 
+        jq \
         openvpn \
-        unrar \ 
+        unrar \
         suckless-tools
 
-        
+
 
 sudo snap install slack --classic
 sudo snap install helm --classic
@@ -43,10 +43,15 @@ sudo apt install --yes \
 
 # Pandoc
 # Get lates: https://github.com/jgm/pandoc/releases/tag/2.2.3.2
-wget https://github.com/jgm/pandoc/releases/download/2.2.3.2/pandoc-2.2.3.2-1-amd64.deb
-sudo dpkg -i pandoc-2.2.3.2-1-amd64.deb
-rm -f pandoc-2.2.3.2-1-amd64.deb
+wget https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-1-amd64.deb
+sudo dpkg -i pandoc-2.7.2-1-amd64.deb
+rm -f pandoc-2.7.2-1-amd64.deb
 
+
+# Zotero
+wget -qO- https://github.com/retorquere/zotero-deb/releases/download/apt-get/install.sh | sudo bash
+sudo apt update
+sudo apt install --yes zotero
 
 ##############################################
 # Emacs
@@ -82,12 +87,10 @@ rm -rf julia.tar.gz
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | zsh
 
 # TeX
-sudo apt install --yes \
-     texlive \
-     xzdek
-
+sudo apt install --yes texlive-base
+sudo apt install --yes texlive texlive-fonts-extra
 tlmgr init-usertree
-tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
+tlmgr option repository ftp://tug.org/historic/systems/texlive/2018/tlnet-final
 
 
 
