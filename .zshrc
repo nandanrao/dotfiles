@@ -1,8 +1,5 @@
-
-
-#
-# User configuration sourced by interactive shells
-#
+# TODO: This should be done in profile.d, why it not??
+export PATH=$PATH:/snap/bin
 
 # Change default zim location
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
@@ -13,12 +10,6 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 #
 # User configuration sourced by interactive shells
 #
-
-# Change default zim location
-export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
-
-# Start zim
-[[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh# Set up the prompt
 
 #autoload -Uz promptinit
 #promptinit
@@ -59,4 +50,5 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
