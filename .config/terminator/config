@@ -1,21 +1,20 @@
 [global_config]
-  enabled_plugins = APTURLHandler, LaunchpadBugURLHandler
-  title_inactive_fg_color = "#e5c200"
-  tab_position = hidden
   borderless = True
+  tab_position = hidden
+  title_inactive_fg_color = "#e5c200"
+  enabled_plugins = APTURLHandler, LaunchpadBugURLHandler
 [keybindings]
 [profiles]
   [[default]]
     background_color = "#272822"
-    background_image = None
     cursor_color = "#ffffff"
-    foreground_color = "#f8f8f2"
-    palette = "#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5:#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5"
-    scrollbar_position = hidden
-    use_system_font = False
-    show_titlebar = False
     font = Source Code Pro
+    foreground_color = "#f8f8f2"
+    show_titlebar = False
+    scrollbar_position = hidden
     scrollback_infinite = True
+    palette = "#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5:#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -23,5 +22,5 @@
       parent = window0
     [[[window0]]]
       type = Window
-      parent = "" 
+      parent = ""
 [plugins]
