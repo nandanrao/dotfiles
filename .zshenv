@@ -14,3 +14,5 @@ alias bgse='cd ~/Documents/bgsedatascience'
 alias kannact='cd ~/Documents/kannact'
 
 alias psql='~/scripts/psql.sh'
+alias mysql='~/scripts/mysql.sh'
+alias dockpy='~/scripts/dockpy.sh'

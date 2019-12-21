@@ -6,7 +6,7 @@ battery_level=$(acpi -b | grep -P -o '[0-9]+(?=%)' | sort -rn | head -1)
 
 charging=$(acpi | grep 'Charging' | wc -l)
 
-if [ $battery_level -le 30 ] && [ $charging != 1 ];
+if [ $battery_level -le 8 ] && [ $charging != 1 ];
 then
   swaynag -t warning -m "Battery level is ${battery_level}%!"
 fi
