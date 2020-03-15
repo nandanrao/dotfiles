@@ -1,3 +1,3 @@
 OPTS=${1:-}
 
-docker run $OPTS -d --rm -v $PWD:/home/jovyan/work -p 8888:8888 jupyter/datascience-notebook start-notebook.sh --NotebookApp.token=''
+docker run $OPTS -d --rm -v $PWD:/home/jupyter/work -p 8888:8888 nandanrao/pyscience jupyter notebook --ip="*" --NotebookApp.token=''
