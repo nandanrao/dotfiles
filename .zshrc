@@ -1,11 +1,3 @@
-# TODO: This should be done in profile.d, why it not??
-export PATH=$PATH:/snap/bin
-
-export PATH=:/home/nandan/.local/bin:$PATH
-
-# JAVA / SWAY Issue https://github.com/swaywm/sway/wiki#issues-with-java-applications
-export _JAVA_AWT_WM_NONREPARENTING=1
-
 # Change default zim location
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
@@ -52,11 +44,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 #     tmux attach -t default || tmux new -s default
